@@ -1,7 +1,7 @@
 {
-    "id": "nodebb-theme-quickstart",
-    "name": "My Theme Name",
-    "description": "Enter a description here",
-    "url": "https://github.com/nodebb/nodebb-theme-quickstart",
+    "id": "nodebb-theme-undeads",
+    "name": "nodebb-theme-undeads",
+    "description": "Undeads nodebb forum theme",
+    "url": "https://github.com/undeadscom/nodebb-theme-undeads",
     "baseTheme": "nodebb-theme-harmony"
 }
