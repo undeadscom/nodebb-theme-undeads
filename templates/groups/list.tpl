@@ -6,7 +6,7 @@
 <div class="groups list flex-fill">
 	<h3 class="fw-semibold">[[pages:groups]]</h3>
 	<div class="list-group-header d-flex flex-wrap justify-content-between p-3 border rounded">
-		<div class="mb-2 mb-md-0">
+		<div class="mb-2 mb-md-0 d-flex justify-content-center">
 			<div class="text-sm d-flex flex-wrap align-items-center gap-2">
 				[[topic:sort-by]]
 				<div class="d-flex flex-wrap gap-2">
@@ -30,8 +30,8 @@
 				</div>
 				<div>
 					<div class="input-group">
-						<input type="text" class="group-search-input form-control form-control-sm" placeholder="[[global:search]]" name="query" id="search-text">
-						<button id="search-button" class="btn btn-primary btn-sm" aria-label="[[global:search]]">
+						<input type="text" class="group-search-input form-control" placeholder="[[global:search]]" name="query" id="search-text">
+						<button id="search-button" class="btn btn-primary" aria-label="[[global:search]]">
 							<i class="fa fa-search"></i>
 						</button>
 					</div>

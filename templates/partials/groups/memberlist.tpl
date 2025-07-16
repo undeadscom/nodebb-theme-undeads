@@ -6,8 +6,8 @@
 	{{{ end }}}
 	<div>
 		<div class="input-group">
-			<input class="form-control form-control-sm" type="text" component="groups/members/search" placeholder="[[global:search]]"/>
-			<button class="btn btn-primary btn-sm search-button" type="button">
+			<input class="form-control group-search-input" type="text" component="groups/members/search" placeholder="[[global:search]]"/>
+			<button class="btn btn-primary" id="search-button" type="button">
 				<i class="fa fa-search"></i>
 			</button>
 		</div>
