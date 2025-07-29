@@ -20,6 +20,12 @@
 	{{{if useCustomCSS}}}
 	<style>{{customCSS}}</style>
 	{{{end}}}
+
+	<link
+  		rel="stylesheet"
+  		href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+	/>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 
 <body class="{bodyClass} skin-{{{if bootswatchSkin}}}{bootswatchSkin}{{{else}}}noskin{{{end}}}">
@@ -32,12 +38,68 @@
 	<div class="layout-container d-flex justify-content-between pb-4 pb-md-0">
 		<!-- IMPORT partials/sidebar-left.tpl -->
 
-		<span class="external-rate">
-  			USD rate: {externalRate}
+		<span class="rate">
+  			USD 1234 rate: {externalRate}
 		</span>
 
 		<main id="panel" class="d-flex flex-column gap-3 flex-grow-1 mt-3" style="min-width: 0;">
-			<!-- IMPORT partials/header/brand.tpl -->
+
+
 			<div class="container-lg px-md-4 d-flex flex-column gap-3 h-100 mb-5 mb-lg-0" id="content">
-			<!-- IMPORT partials/noscript/warning.tpl -->
-			<!-- IMPORT partials/noscript/message.tpl -->
+
+							<div class="swiper">
+  			<div class="swiper-wrapper">
+    			<div class="swiper-slide">
+    				<div class="slide-content">
+    					<h3>Слайд 1</h3>
+    					<p>Описание первого слайда</p>
+    					<a href="#link1" class="slide-button">
+    						Перейти
+    					</a>
+    				</div>
+    			</div>
+    			<div class="swiper-slide">
+    				<div class="slide-content">
+    					<h3>Слайд 2</h3>
+    					<p>Описание второго слайда</p>
+    					<a href="#link2" class="slide-button">
+    						Перейти
+    					</a>
+    				</div>
+    			</div>
+   				<div class="swiper-slide">
+   					<div class="slide-content">
+   						<h3>Слайд 3</h3>
+   						<p>Описание третьего слайда</p>
+   						<a href="#link3" class="slide-button">
+   							Перейти
+   						</a>
+   					</div>
+   				</div>
+  			</div>
+  			<div class="swiper-pagination"></div>
+		</div>
+
+
+<script>
+  const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+</script>

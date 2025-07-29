@@ -4,7 +4,7 @@
 // feel free to change these for your custom theme
 
 // Harmony colours
-$white:    #fff !default;
+$white: #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
@@ -14,23 +14,23 @@ $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
-$black:    #000 !default;
+$black: #000 !default;
 $main: #070928 !default;
 
-$blue:    #0d6efd !default;
-$red:     #dc3545 !default;
-$yellow:  #ffc107 !default;
-$green:   #198754 !default;
-$cyan:    #0dcaf0 !default;
+$blue: #0d6efd !default;
+$red: #dc3545 !default;
+$yellow: #ffc107 !default;
+$green: #198754 !default;
+$cyan: #0dcaf0 !default;
 
-$primary:       $blue !default;
-$secondary:     $gray-600 !default;
-$success:       $green !default;
-$info:          $cyan !default;
-$warning:       $yellow !default;
-$danger:        $red !default;
-$light:         $gray-100 !default;
-$dark:          $gray-900 !default;
+$primary: $blue !default;
+$secondary: $gray-600 !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: $gray-900 !default;
 
 $body-color: $white !default;
 $body-bg: $main !default;
@@ -45,12 +45,12 @@ $btn-ghost-hover-color-dark: mix($dark, $light, 90%);
 $btn-ghost-active-color-dark: lighten($btn-ghost-hover-color-dark, 5%);
 
 :root {
-	--btn-ghost-hover-color: #{$btn-ghost-hover-color};
-	--btn-ghost-active-color: #{$btn-ghost-active-color};
+  --btn-ghost-hover-color: #{$btn-ghost-hover-color};
+  --btn-ghost-active-color: #{$btn-ghost-active-color};
 }
 [data-bs-theme="dark"] {
-	--btn-ghost-hover-color: #{$btn-ghost-hover-color-dark};
-	--btn-ghost-active-color: #{$btn-ghost-active-color-dark};
+  --btn-ghost-hover-color: #{$btn-ghost-hover-color-dark};
+  --btn-ghost-active-color: #{$btn-ghost-active-color-dark};
 }
 
 // no caret on dropdown-toggle
@@ -65,8 +65,12 @@ $link-decoration: none;
 $link-hover-decoration: underline;
 
 // Custom fonts
-$font-family-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$font-family-secondary: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+  "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-secondary: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto,
+  "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-weight-semibold: 500 !default;
 $small-font-size: 0.875rem !default;
 
@@ -75,6 +79,109 @@ $breadcrumb-divider-color: $gray-500 !default;
 $breadcrumb-active-color: $body-color !default;
 $breadcrumb-item-padding-x: 12px !default;
 
-.form-control::placeholder, .bootstrap-tagsinput::placeholder {
-	color: $gray-500 !important;
+.form-control::placeholder,
+.bootstrap-tagsinput::placeholder {
+  color: $gray-500 !important;
+}
+
+// header styles
+:root {
+	--gradient-rainbow: linear-gradient(90deg, #CA0E0E 0%, #C6AD10 16.67%, #58C13D 33.33%, #3BEFCA 50%, #434BD7 66.67%, #D300EE 83.33%, #CA0E0E 100%);
+	--gradient-2: linear-gradient(90deg, #FF006C 0%, #D911BA 100%);
+}
+
+.swiper {
+	width: 100%;
+	height: 200px;
+	margin: 20px 0;
+}
+
+.swiper-slide {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--gradient-rainbow);
+	border-radius: 24px;
+	padding: 4px;
+}
+
+.swiper-slide::before {
+	content: '';
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	right: 4px;
+	bottom: 4px;
+	background: #000000 url("https://cdn.undeads.com/assets/banners/airdrop/grid.png") repeat 100% 0;
+	border-radius: 20px;
+	z-index: 0;
+}
+
+.slide-content {
+	text-align: center;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 16px;
+	position: relative;
+	z-index: 1;
+	padding: 16px;
+	width: 100%;
+	height: 100%;
+}
+
+.slide-content h3 {
+	margin: 0;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.slide-content p {
+	margin: 0;
+	font-size: 1rem;
+	opacity: 0.9;
+}
+
+.slide-button {
+	display: flex;
+	padding: 12px 16px;
+	align-items: center;
+	border-radius: 12px;
+	background: var(--gradient-2, linear-gradient(90deg, #FF006C 0%, #D911BA 100%));
+	text-decoration: none;
+	color: white;
+	font-weight: 500;
+	transition: all 0.3s ease;
+}
+
+.slide-button:hover {
+	text-decoration: none;
+	color: white;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(255, 0, 108, 0.3);
+}
+
+.swiper-pagination-bullet {
+	background: #E3E7EB !important;
+	opacity: 1 !important;
+	width: 12px !important;
+	height: 12px !important;
+	margin: 0 4px !important;
+}
+
+.swiper-pagination-bullet-active {
+	background: #E40BA1 !important;
+}
+
+.swiper-pagination {
+	bottom: 10px !important;
+}
+
+.rate {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
