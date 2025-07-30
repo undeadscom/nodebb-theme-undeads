@@ -54,7 +54,7 @@
 							<div class="swiper">
   			<div class="swiper-wrapper">
     			<div class="swiper-slide">
-    				<div class="slide-content slide-content-first">
+    				<div class="slide-content slide-content-1">
     					<div class="slide-left">
     						<h3 class="slide-title">Spin your Wheel of Fortune!</h3>
     						<p class="slide-description">Earn or purchase spins to test your luck. Spin the Wheel of Fortune and win amazing prizes!</p>
@@ -62,19 +62,47 @@
     							Spin now
     						</a>
     					</div>
-    					<div class="slide-right">
+    					<div class="slide-right-1">
     						<img src="https://cdn.undeads.com/assets/forum/header-slider/slide1.png" alt="Wheel of Fortune" class="slide-image">
     					</div>
     				</div>
     			</div>
     			<div class="swiper-slide">
-    				<div class="slide-content">
-    					<h3>Слайд 2</h3>
-    					<p>Описание второго слайда</p>
-    					<a href="#link2" class="slide-button">
-    						Перейти
-    					</a>
+    				<div class="slide-content slide-content-2">
+						<div class="slide-left-2">
+    						<h3 class="slide-title">Paired Staking</h3>
+							<div class="slide-button-container">
+    						<a href="#link2" class="slide-button">
+    							Stake $UDS
+    						</a>
+							</div>
+						</div>
+						<div class="slide-center-2">
+							<div class="slide-center-content">
+								<div class="slide-center-text">
+									<img src="https://cdn.undeads.com/assets/forum/header-slider/slide-2-icon-1.png" alt="APR icon" class="slide-center-icon">
+									Earn up to 50% APR
+								</div>
+								<div class="slide-center-text">
+									<img src="https://cdn.undeads.com/assets/forum/header-slider/slide-2-icon-2.png" alt="NFT icon" class="slide-center-icon">
+									Boost earnings with NFTs
+								</div>
+								<div class="slide-center-text">
+									<img src="https://cdn.undeads.com/assets/forum/header-slider/slide-2-icon-3.png" alt="Earn icon" class="slide-center-icon">
+									Play, HODL & earn more
+								</div>
+							</div>
+						</div>
+						<div class="slide-right-2">
+    						<img src="https://cdn.undeads.com/assets/forum/header-slider/slide2.png" alt="Stake $UDS" class="slide-image">
+    					</div>
+						<div class="slide-button-container-small">
+    						<a href="#link2" class="slide-button">
+    							Stake $UDS
+    						</a>
+						</div>
     				</div>
+
     			</div>
    				<div class="swiper-slide">
    					<div class="slide-content">
@@ -85,6 +113,7 @@
    						</a>
    					</div>
    				</div>
+
   			</div>
   			<div class="swiper-pagination"></div>
 		</div>
@@ -94,6 +123,7 @@
   const swiper = new Swiper('.swiper', {
   // Optional parameters
   loop: true,
+  initialSlide: 1,
 
   // If we need pagination
   pagination: {
