@@ -87,8 +87,11 @@ $breadcrumb-item-padding-x: 12px !default;
 // Import header slider styles
 @import "header-slider";
 
-
 .layout-container {
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+
   @media (max-width: 991px) {
     flex-direction: column;
   }
@@ -96,7 +99,11 @@ $breadcrumb-item-padding-x: 12px !default;
 
 .header-slider-container {
   flex: 1;
+  min-width: 0;
+  max-width: 100%;
   width: 100%;
   height: 100%;
   flex-direction: column;
+  overflow: hidden;
+  box-sizing: border-box;
 }
