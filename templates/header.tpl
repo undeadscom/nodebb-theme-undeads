@@ -42,16 +42,12 @@
 	<div class="layout-container d-flex justify-content-between pb-4 pb-md-0">
 		<!-- IMPORT partials/sidebar-left.tpl -->
 
-		<span class="rate">
-  			USD 1234 rate: {externalRate}
-		</span>
-
 		<main id="panel" class="d-flex flex-column gap-3 flex-grow-1 mt-3" style="min-width: 0;">
 
 
-			<div class="container-lg px-md-4 d-flex flex-column gap-3 h-100 mb-5 mb-lg-0" id="content">
+		<div class="container-lg px-md-4 d-flex flex-column gap-3 h-100 mb-5 mb-lg-0" id="content">
 
-							<div class="swiper">
+		<div class="swiper">
   			<div class="swiper-wrapper">
     			<div class="swiper-slide">
     				<div class="slide-content slide-content-1">
