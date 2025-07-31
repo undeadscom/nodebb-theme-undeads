@@ -70,7 +70,7 @@
     			<div class="swiper-slide">
     				<div class="slide-content slide-content-2">
 						<div class="slide-left-2">
-    						<h3 class="slide-title">Paired Staking</h3>
+    						<h3 class="slide-title-2">Paired Staking</h3>
 							<div class="slide-button-container">
     						<a href="#link2" class="slide-button">
     							Stake $UDS
@@ -105,12 +105,20 @@
 
     			</div>
    				<div class="swiper-slide">
-   					<div class="slide-content">
-   						<h3>Слайд 3</h3>
-   						<p>Описание третьего слайда</p>
-   						<a href="#link3" class="slide-button">
-   							Перейти
-   						</a>
+   					<div class="slide-content slide-content-3">
+   						<div class="slide-left-3">
+   							<img src="https://cdn.undeads.com/assets/forum/header-slider/slide3-left.png" alt="UDS Left" class="slide-image">
+   						</div>
+   						<div class="slide-center-3">
+   							<h3 class="slide-title-3">Buy UDS!</h3>
+   							<p class="slide-description-3">Buy UDS with popular exchanges! Make purchases and claim rewards!</p>
+   							<a href="#link3" class="slide-button">
+   								Buy UDS
+   							</a>
+   						</div>
+   						<div class="slide-right-3">
+   							<img src="https://cdn.undeads.com/assets/forum/header-slider/slide3-right.png" alt="UDS Right" class="slide-image">
+   						</div>
    					</div>
    				</div>
 
@@ -123,7 +131,7 @@
   const swiper = new Swiper('.swiper', {
   // Optional parameters
   loop: true,
-  initialSlide: 1,
+  initialSlide: 2,
 
   // If we need pagination
   pagination: {
