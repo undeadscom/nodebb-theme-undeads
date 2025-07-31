@@ -105,7 +105,7 @@
 							<div class="slide-center-3">
 								<h3 class="slide-title-3">Buy UDS!</h3>
 								<p class="slide-description-3">Buy UDS with popular exchanges! Make purchases and claim rewards!</p>
-								<a href="#link3" class="slide-button">
+								<a href="https://undeads.com/tokenomics" class="slide-button">
 									Buy UDS
 								</a>
 							</div>
