@@ -30,6 +30,7 @@
   		href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 	/>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="https://unpkg.com/@popperjs/core@2"></script>
 </head>
 
 <body class="{bodyClass} skin-{{{if bootswatchSkin}}}{bootswatchSkin}{{{else}}}noskin{{{end}}}">
@@ -42,8 +43,37 @@
 	<div class="layout-container d-flex justify-content-between pb-4 pb-md-0">
 		<!-- IMPORT partials/sidebar-left.tpl -->
 
+
+
 		<div class="header-slider-container px-4">
 			<!-- IMPORT partials/header/brand.tpl -->
+		<div class="external-rate">
+			<a href="https://www.coingecko.com/en/coins/undeads-games" class="rate-block-clickable">
+				<img src="https://cdn.undeads.com/assets/icons/uds@2x.png" alt="UDS" class="uds-icon">
+				<span class="rate-label">UDS:</span>
+				<span class="rate-value-1">${rates.price}</span>
+			</a>
+			<div class="rate-divider"></div>
+			<div class="rate-block">
+				<span class="rate-label">24h:</span>
+				<span class="rate-value-2-{{{ if rates.isPositivePercentageChange24h }}}positive{{{ else }}}negative{{{ end }}}">{rates.percentageChange24h}%</span>
+			</div>
+			<div class="rate-divider"></div>
+			<div id="popover-btn" class="rate-block-clickable">
+				<span class="rate-label">Trade UDS</span>
+			</div>
+			<div id="popover-content" role="tooltip">
+				{{{ each popoverData }}}
+				<a href="{popoverData.link}" target="_blank" class="popover-item">
+					<div class="popover-content">
+						<img src="{popoverData.icon}" alt="{popoverData.name}" class="popover-icon">
+						<div class="popover-name">{popoverData.name}</div>
+						<div class="popover-description">{popoverData.description}</div>
+					</div>
+				</a>
+				{{{ end }}}
+			</div>
+		</div>
 			<div class="swiper">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
@@ -134,4 +164,47 @@
 	clickable: true,
   },
 });
+</script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const button = document.querySelector('#popover-btn');
+    const tooltip = document.querySelector('#popover-content');
+
+    const popoverInstance = Popper.createPopper(button, tooltip, {
+      placement: 'bottom',
+    });
+
+    function togglePopover() {
+      const isVisible = getComputedStyle(tooltip).display !== 'none';
+      tooltip.style.display = isVisible ? 'none' : 'block';
+      popoverInstance.update();
+    }
+
+    function closePopover() {
+      tooltip.style.display = 'none';
+      popoverInstance.update();
+    }
+
+    button.addEventListener('click', (e) => {
+      e.stopPropagation();
+      togglePopover();
+    });
+
+    tooltip.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+
+    document.addEventListener('click', (e) => {
+      const isVisible = getComputedStyle(tooltip).display !== 'none';
+      if (isVisible && 
+          !tooltip.contains(e.target) && 
+          !button.contains(e.target)) {
+        closePopover();
+      }
+    });
+  });
+
+
 </script>

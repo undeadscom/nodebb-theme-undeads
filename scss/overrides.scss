@@ -3,6 +3,9 @@
 // below are the default values from harmony theme overrides.scss file
 // feel free to change these for your custom theme
 
+@import "header-slider";
+@import "header-currencies";
+
 // Harmony colours
 $white: #fff !default;
 $gray-100: #f8f9fa !default;
@@ -84,9 +87,6 @@ $breadcrumb-item-padding-x: 12px !default;
   color: $gray-500 !important;
 }
 
-// Import header slider styles
-@import "header-slider";
-
 .layout-container {
   max-width: 100%;
   overflow-x: hidden;
@@ -106,4 +106,5 @@ $breadcrumb-item-padding-x: 12px !default;
   flex-direction: column;
   overflow: hidden;
   box-sizing: border-box;
+  text-align: center;
 }
