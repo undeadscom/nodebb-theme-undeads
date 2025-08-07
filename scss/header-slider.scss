@@ -1,4 +1,5 @@
 // Header slider styles
+@import "./mixins";
 :root {
   --gradient-rainbow: linear-gradient(
     90deg,
@@ -274,6 +275,7 @@
 
   @media (max-width: 580px) {
     text-align: center;
+    text-wrap: nowrap;
   }
 }
 
@@ -372,6 +374,9 @@
   transition: all 0.3s ease;
   width: 300px;
   justify-content: center;
+  @include media(500px) {
+    padding: 12px 0;
+  }
 }
 .slide-button:hover {
   text-decoration: none;
