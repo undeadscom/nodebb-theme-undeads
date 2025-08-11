@@ -66,99 +66,17 @@
   				</svg>
 			</div>
 			<div id="popover-content" role="tooltip">
-					<div class="popover-content">
-						<div class="popover-content-list">
-						<ul>
-							<li>
-								<a href="https://www.gate.io/trade/UDS_USDT" target="_blank">
-									<!-- IMPORT partials/icon-gate-io.tpl -->
-									<p>Gate.io</p>
-									<p>UDS / USDT</p>
-								</a>
-							</li>
-							<li>
-								<a href="https://www.mexc.com/exchange/UDS_USDT" target="_blank">
-									<!-- IMPORT partials/icon-mexc.tpl -->
-									<p>MEXC</p>
-									<p>UDS / USDT</p>
-								</a>
-							</li>
-							<li>
-								<a href="https://www.weex.com/trade/UDS-USDT" target="_blank">
-									<!-- IMPORT partials/icon-weex.tpl -->
-									<p>WEEX</p>
-									<p>UDS / USDT</p>
-								</a>
-							</li>
-							<li>	
-								<a href="https://www.coinstore.com/spot/udsusdt" target="_blank">
-									<!-- IMPORT partials/icon-coinstore.tpl -->
-									<p>Coinstore</p>
-									<p>UDS / USDT</p>
-								</a>
-							</li>
-							<li>
-								<a href="https://www.biconomy.com/exchange/UDS_USDT" target="_blank">
-									<!-- IMPORT partials/icon-biconomy.tpl -->
-									<p>Biconomy.com</p>
-									<p>UDS / USDT</p>
-								</a>
-							</li>
-							<li>
-								<a href="https://bingx.com/en/spot/UDSUSDT" target="_blank">
-									<!-- IMPORT partials/icon-bingx.tpl -->
-									<p>BingX</p>
-									<p>UDS / USDT</p>
-								</a>
-							</li>
-							<li>
-								<a href="https://www.xt.com/en/trade/uds_usdt" target="_blank">
-									<!-- IMPORT partials/icon-xt.tpl -->
-									<p>XT.COM</p>
-									<p>UDS / USDT</p>
-								</a>
-							</li>
-							<li>
-								<a href="https://coinmarketcap.com/exchanges/uniswap-v3/" target="_blank">
-									<!-- IMPORT partials/icon-uniswap.tpl -->
-									<p>Uniswap v3</p>
-									<p>UDS / USDT</p>
-								</a>
-							</li>
-						</ul>
-						 </div>
-					</div>
-				</a>
-			
+				{{{ each popoverData }}}
+					<a href="{popoverData.link}" target="_blank" class="popover-item">
+						<div class="popover-content">
+							<img src="{popoverData.icon}" alt="{popoverData.name}" class="popover-icon">
+							<div class="popover-name">{popoverData.name}</div>
+							<div class="popover-description">{popoverData.description}</div>
+						</div>
+					</a>
+				{{{ end }}}
 			</div>
 		</div>
-		<script>
-		document.addEventListener('DOMContentLoaded', function() {
-			var config = JSON.parse('{{configJSON}}');
-			if (config.env === 'development') {
-				fetch('https://api-gateway.zombiesdev.com/rates/UDS/USD').then((res) => res.json()).then(data => {
-					const udsData = data.data
-					const udsPrice = document.querySelector('.rate-value-1');
-					const lastDayChanges = document.querySelector('#lastDay')
-					const percentageChange24h = udsData.percentageChange24h.toFixed(2)
-					lastDayChanges.className = percentageChange24h > 0 ? 'rate-value-2-positive' : 'rate-value-2-negative'
-					lastDayChanges.innerHTML = percentageChange24h > 0 ?  '+' + percentageChange24h + '%' : percentageChange24h + '%'
-					udsPrice.innerHTML = `$` + udsData.price
-				});
-			} else {
-				fetch('https://api.undeads.com/rates/UDS/USD').then((res) => res.json()).then(data => {
-					const udsData = data.data
-					const udsPrice = document.querySelector('.rate-value-1');
-					const lastDayChanges = document.querySelector('#lastDay')
-					const percentageChange24h = udsData.percentageChange24h.toFixed(2)
-					lastDayChanges.className = percentageChange24h > 0 ? 'rate-value-2-positive' : 'rate-value-2-negative'
-					lastDayChanges.innerHTML = percentageChange24h > 0 ?  '+' + `${percentageChange24h}` + '%' : percentageChange24h + '%'
-					udsPrice.innerHTML = `$` + udsData.price
-				});
-			}
-				
-			});
-		</script>
 			<div class="swiper">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
