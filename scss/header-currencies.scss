@@ -1,3 +1,4 @@
+@import "./mixins";
 .external-rate {
   position: absolute;
   z-index: 1000;
@@ -46,12 +47,21 @@
 
 .rate-label {
   color: #5b617c;
-  font-family: Poppins;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 24px; /* 150% */
+  @include create-font(16px, 700, 24px);
+  white-space: nowrap;
   text-transform: uppercase;
+  @include media(600px) {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+  &-arrow {
+    padding-left: 4px;
+    width: 24px;
+    height: 24px;
+    fill: #5b617c;
+    transition: transform 0.3s;
+  }
 }
 
 .rate-value-1 {
