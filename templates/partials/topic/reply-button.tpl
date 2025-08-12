@@ -12,6 +12,13 @@
 	<a href="#" component="topic/reply/locked" class="d-flex gap-2 align-items-center fw-semibold btn btn-sm btn-primary disabled {{{ if (privileges.topics:reply || !locked) }}}hidden{{{ end }}}" disabled><i class="fa fa-fw fa-lock"></i> [[topic:locked]]</a>
 {{{ else }}}
 	{{{ if !privileges.topics:reply }}}
-	<a component="topic/reply/guest" href="{config.relative_path}/login" class="d-flex gap-2 align-items-center fw-semibold btn btn-sm btn-primary"><i class="fa fa-fw fa-sign-in {{{ if !config.theme.topicSidebarTools}}} d-sm-block d-md-none {{{ end }}}"></i><span>[[topic:guest-login-reply]]</span></a>
+	<button component="topic/reply/guest" id="login" class="d-flex gap-2 align-items-center fw-semibold btn btn-sm btn-primary"><i class="fa fa-fw fa-sign-in {{{ if !config.theme.topicSidebarTools}}} d-sm-block d-md-none {{{ end }}}"></i><span>[[topic:guest-login-reply]]</span></button>
+	<script>
+		const login = document.getElementById('login');
+			login.addEventListener('click', () => {
+			localStorage.setItem('redirect', '/forum');
+			window.location.href='/auth'
+		})
+	</script>
 	{{{ end }}}
 {{{ end }}}
