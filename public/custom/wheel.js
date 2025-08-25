@@ -1,24 +1,30 @@
 "use strict";
 
-$(document).ready(function () {
+document.addEventListener("DOMContentLoaded", function () {
   initViralWheel();
 });
 
-$(window).on("action:ajaxify.end", function () {
-  initViralWheel();
-});
+if (typeof window !== "undefined" && window["jQuery"]) {
+  window["jQuery"](window).on("action:ajaxify.end", function () {
+    initViralWheel();
+  });
+}
 
 function initViralWheel() {
   var roots = document.querySelectorAll(".viral-wheel");
   if (!roots.length) return;
 
   roots.forEach(function (root) {
-    if (root.dataset.bound === "1") return;
-    root.dataset.bound = "1";
+    if (root.getAttribute("data-bound") === "1") return;
+    root.setAttribute("data-bound", "1");
 
-    var source = root.querySelector(".viral-wheel__source");
-    var btn = root.querySelector(".viral-wheel__btn");
-    if (!source || !btn) return;
+    var sourceEl = root.querySelector(".viral-wheel__source");
+    var btnEl = root.querySelector(".viral-wheel__btn");
+    if (!sourceEl || !btnEl) return;
+    /** @type {HTMLElement} */
+    var source = /** @type {any} */ (sourceEl);
+    /** @type {HTMLElement} */
+    var btn = /** @type {any} */ (btnEl);
 
     var durationMs = 5000;
     var timingFun = "cubic-bezier(0.36, 0.95, 0.64, 1)";
