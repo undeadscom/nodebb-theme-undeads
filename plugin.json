@@ -12,6 +12,7 @@
 	],
 	"scripts": [
 		"public/client.js",
+		"public/wheel.js",
 		"../nodebb-theme-harmony/public/harmony.js"
 	],
 	"templates": "templates",

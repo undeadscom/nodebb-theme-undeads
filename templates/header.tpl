@@ -89,7 +89,8 @@
 								</a>
 							</div>
 							<div class="slide-right-1">
-								<img src="https://cdn.undeads.com/assets/forum/header-slider/slide1.png" alt="Wheel of Fortune" class="slide-image">
+								<img src="https://cdn.undeads.com/assets/forum/header-slider/slide1-new.png" alt="Wheel of Fortune" class="slide-image">
+								<!-- IMPORT partials/wheel.tpl -->
 							</div>
 						</div>
 					</div>
