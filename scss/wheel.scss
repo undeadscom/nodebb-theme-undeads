@@ -1,8 +1,9 @@
 .viral-wheel {
-  position: relative;
-  width: 100%;
-  max-width: 560px;
-  margin: 12px auto 16px;
+  position: absolute;
+  right: 30px;
+  bottom: 10px;
+  width: 180px;
+  height: 180px;
 }
 
 .viral-wheel img {
@@ -18,6 +19,7 @@
   z-index: 2;
   cursor: pointer;
   transition: opacity 0.2s ease;
+  pointer-events: auto;
 }
 
 .viral-wheel__btn img.viral__spin {
@@ -43,7 +45,10 @@
 }
 
 .viral-wheel__source {
+  pointer-events: none;
+  height: 100%;
   width: 100%;
+  object-fit: contain;
   transition: transform 0ms linear;
 }
 
