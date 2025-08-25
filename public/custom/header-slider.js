@@ -23,6 +23,3 @@ function initHeaderSwiper() {
 }
 
 document.addEventListener("DOMContentLoaded", initHeaderSwiper);
-if (typeof window !== "undefined" && window.jQuery) {
-  window.jQuery(window).on("action:ajaxify.end", initHeaderSwiper);
-}

@@ -54,6 +54,3 @@ function initExternalRatePopover() {
 }
 
 document.addEventListener("DOMContentLoaded", initExternalRatePopover);
-if (typeof window !== "undefined" && window.jQuery) {
-  window.jQuery(window).on("action:ajaxify.end", initExternalRatePopover);
-}
