@@ -6,7 +6,6 @@ function initHeaderSwiper() {
   if (container.getAttribute("data-bound") === "1") return;
   container.setAttribute("data-bound", "1");
 
-  // eslint-disable-next-line no-undef
   var SwiperCtor =
     typeof window !== "undefined" && window.Swiper ? window.Swiper : null;
   if (!SwiperCtor) return;
@@ -16,10 +15,10 @@ function initHeaderSwiper() {
       el: ".swiper-pagination",
       clickable: true,
     },
-    // autoplay: {
-    //   delay: 5000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
   });
 }
 
