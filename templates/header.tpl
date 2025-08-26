@@ -47,7 +47,6 @@
 			<!-- IMPORT partials/header/brand.tpl -->
 			<!-- IMPORT partials/custom/external-rate.tpl -->
 			<!-- IMPORT partials/custom/slider.tpl -->
-		<div class="container-lg px-md-4 d-flex flex-column gap-3 h-100 mb-5 mb-lg-0" id="content"></div>
+		<div class="container-lg px-md-4 d-flex flex-column gap-3 h-100 mb-5 mb-lg-0" id="content">
 			<!-- IMPORT partials/noscript/warning.tpl -->
 			<!-- IMPORT partials/noscript/message.tpl -->
-
