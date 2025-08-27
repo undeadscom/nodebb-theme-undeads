@@ -12,9 +12,15 @@
 	<a href="#" component="topic/reply/locked" class="d-flex gap-2 align-items-center fw-semibold btn btn-sm btn-primary disabled {{{ if (privileges.topics:reply || !locked) }}}hidden{{{ end }}}" disabled><i class="fa fa-fw fa-lock"></i> [[topic:locked]]</a>
 {{{ else }}}
 	{{{ if !privileges.topics:reply }}}
+<<<<<<< HEAD
 	<button component="topic/reply/guest" id="login" class="d-flex gap-2 align-items-center fw-semibold btn btn-sm btn-primary"><i class="fa fa-fw fa-sign-in {{{ if !config.theme.topicSidebarTools}}} d-sm-block d-md-none {{{ end }}}"></i><span>[[topic:guest-login-reply]]</span></button>
 	<script>
 		const login = document.getElementById('login');
+=======
+	<button component="topic/reply/guest" id="loginToReply" class="d-flex gap-2 align-items-center fw-semibold btn btn-sm btn-primary"><i class="fa fa-fw fa-sign-in {{{ if !config.theme.topicSidebarTools}}} d-sm-block d-md-none {{{ end }}}"></i><span>[[topic:guest-login-reply]]</span></button>
+	<script>
+		const login = document.getElementById('loginToReply');
+>>>>>>> 1bc7b7905ac98f4813fca09111c72eb854909cd5
 			login.addEventListener('click', () => {
 			localStorage.setItem('redirect', '/forum');
 			window.location.href='/auth'

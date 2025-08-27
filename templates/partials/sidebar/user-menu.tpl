@@ -2,7 +2,7 @@
 	{buildAvatar(user, "20px", true)}
 	<span id="user-header-name" class="nav-text small visible-open fw-semibold">{user.username}</span>
 </a>
-<ul id="user-control-list" component="header/usercontrol" class="overscroll-behavior-contain user-dropdown dropdown-menu shadow p-1 text-sm ff-base" role="menu">
+<ul id="user-control-list" component="header/usercontrol" class="tab-bg overscroll-behavior-contain user-dropdown dropdown-menu shadow p-1 text-sm ff-base" role="menu">
 	<li>
 		<a class="dropdown-item rounded-1 d-flex align-items-center gap-2" component="header/profilelink" href="{relative_path}/user/{user.userslug}" role="menuitem" aria-label="[[user:profile]]">
 			<span component="user/status" class="flex-shrink-0 border border-white border-2 rounded-circle status {user.status}"><span class="visually-hidden">[[global:{user.status}]]</span></span>

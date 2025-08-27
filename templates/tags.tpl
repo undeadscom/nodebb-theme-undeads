@@ -6,7 +6,7 @@
 
 <div class="row flex-fill">
 	<div class="tags {{{if widgets.sidebar.length }}}col-lg-9 col-sm-12{{{ else }}}col-lg-12{{{ end }}}">
-		<h3 class="fw-semibold">[[pages:tags]]</h3>
+		<h3 class="fw-semibold d-flex justify-content-start">[[pages:tags]]</h3>
 		{{{ if displayTagSearch }}}
 		{{{ if tags.length }}}
 		<div class="row justify-content-end mb-3">

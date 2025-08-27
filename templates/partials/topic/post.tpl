@@ -43,7 +43,7 @@
 						</a>
 					</div>
 
-					<a class="fw-bold text-nowrap text-truncate" href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}" data-username="{posts.user.username}" data-uid="{posts.user.uid}">{posts.user.displayname}</a>
+					<a class="post fw-bold  text-nowrap text-truncate" href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}" data-username="{posts.user.username}" data-uid="{posts.user.uid}">{posts.user.displayname}</a>
 				</div>
 
 				{{{ each posts.user.selectedGroups }}}
@@ -80,7 +80,7 @@
 			</div>
 		</div>
 
-		<div class="content text-break" component="post/content" itemprop="text">
+		<div class="content posts-links text-break" component="post/content" itemprop="text">
 			{posts.content}
 		</div>
 
@@ -118,7 +118,7 @@
 
 					{{{ if !reputation:disabled }}}
 					<div class="d-flex votes align-items-center">
-						<a component="post/upvote" href="#" class="btn btn-ghost btn-sm{{{ if posts.upvoted }}} upvoted{{{ end }}}" title="[[topic:upvote-post]]">
+						<a component="post/upvote" href="/auth" class="btn btn-ghost btn-sm{{{ if posts.upvoted }}} upvoted{{{ end }}}" title="[[topic:upvote-post]]">
 							<i class="fa fa-fw fa-chevron-up text-primary"></i>
 						</a>
 
@@ -127,7 +127,7 @@
 						<a href="#" class="px-2 mx-1 btn btn-ghost btn-sm" component="post/vote-count" data-votes="{posts.votes}" title="[[global:voters]]">{posts.votes}</a>
 
 						{{{ if !downvote:disabled }}}
-						<a component="post/downvote" href="#" class="btn btn-ghost btn-sm{{{ if posts.downvoted }}} downvoted{{{ end }}}" title="[[topic:downvote-post]]">
+						<a component="post/downvote" href="/auth" class="btn btn-ghost btn-sm{{{ if posts.downvoted }}} downvoted{{{ end }}}" title="[[topic:downvote-post]]">
 							<i class="fa fa-fw fa-chevron-down text-primary"></i>
 						</a>
 						{{{ end }}}
