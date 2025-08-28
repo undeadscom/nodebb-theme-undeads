@@ -47,16 +47,10 @@
 				{{{ end }}}
 				<!-- only show login button if not logged in and doesn't have any posting privilege -->
 				{{{ if (!loggedIn && (!privileges.topics:create && !canPost))}}}
-<<<<<<< HEAD
-				<button component="category/post/guest" class="btn btn-sm btn-primary" id="login">[[category:guest-login-post]]</button>
-				<script>
-					const login = document.getElementById('login');
-=======
 				<button component="category/post/guest" class="btn btn-sm btn-primary" id="loginToPost">[[category:guest-login-post]]</button>
 				<script>
-					const login = document.getElementById('loginToPost');
->>>>>>> 1bc7b7905ac98f4813fca09111c72eb854909cd5
-						login.addEventListener('click', () => {
+					const loginPost = document.getElementById('loginToPost');
+						loginPost.addEventListener('click', () => {
 						localStorage.setItem('redirect', '/forum');
 						window.location.href='/auth'
 					})
