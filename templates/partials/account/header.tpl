@@ -15,7 +15,7 @@
 		</div>
 	</div>
 
-	<div class="d-flex flex-column flex-md-row gap-2 w-100 pb-4 mb-4 mt-2 border-bottom">
+	<div class="d-flex flex-column flex-md-column gap-2 w-100 pb-4 mb-4 mt-2 border-bottom">
 		<div {{{ if (allowProfilePicture && isSelfOrAdminOrGlobalModerator)}}}component="profile/change/picture"{{{ end }}} class="avatar-wrapper border border-white border-4 rounded-circle position-relative align-self-center align-self-md-start hover-parent" style="margin-top: -75px;">
 			{buildAvatar(@value, "142px", true)}
 			{{{ if (allowProfilePicture && isSelfOrAdminOrGlobalModerator)}}}
@@ -30,7 +30,7 @@
 				<div class="d-flex flex-column gap-1">
 					<h2 class="fullname fw-semibold fs-2 tracking-tight mb-0">{{{ if fullname }}}{fullname}{{{ else }}}{username}{{{ end }}}</h2>
 					<div class="d-flex flex-wrap gap-1 text-sm align-items-center">
-						<span class="username fw-bold">{{{ if !banned }}}@{username}{{{ else }}}[[user:banned]]{{{ end }}}</span>
+						<span class="username">{{{ if !banned }}}@{username}{{{ else }}}[[user:banned]]{{{ end }}}</span>
 						<div class="d-flex align-items-center gap-1 p-1 flex-wrap">
 							{{{ if selectedGroup.length }}}
 							{{{ each selectedGroup }}}
@@ -59,6 +59,7 @@
 			<div class="flex-shrink-0 d-flex gap-1 align-self-stretch align-self-md-start justify-content-end">
 				{{{ if loggedIn }}}
 				{{{ if !isSelf }}}
+				<button id="donate" class="btn btn-primary btn-img" data-uid="{{uid}}" data-username="{{username}}" data-picture="{{picture}}"><img src="/forum/assets/images/coins-icon.svg" alt="coins">Donate UDS</button>
 				<a component="account/unfollow" href="#" class="btn btn-primary flex-fill{{{ if (!isFollowing && !isFollowPending) }}} hide{{{ end }}}">[[user:{{{ if isFollowPending }}}cancel-follow{{{ else }}}unfollow{{{ end }}}]]</a>
 				<a component="account/follow" href="#" class="btn btn-primary flex-fill{{{ if (isFollowing || isFollowPending) }}} hide{{{ end }}}">[[user:follow]]</a>
 				{{{ end }}}
