@@ -14,9 +14,9 @@
 	{{{ if !privileges.topics:reply }}}
 	<button component="topic/reply/guest" id="loginToReply" class="d-flex gap-2 align-items-center fw-semibold btn btn-sm btn-primary"><i class="fa fa-fw fa-sign-in {{{ if !config.theme.topicSidebarTools}}} d-sm-block d-md-none {{{ end }}}"></i><span>[[topic:guest-login-reply]]</span></button>
 	<script>
-		const login = document.getElementById('loginToReply');
-			login.addEventListener('click', () => {
-			localStorage.setItem('redirect', '/forum');
+		const loginReply = document.getElementById('loginToReply');
+			loginReply.addEventListener('click', () => {
+			localStorage.setItem('redirect', '/forum/');
 			window.location.href='/auth'
 		})
 	</script>

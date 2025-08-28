@@ -1,6 +1,6 @@
 
 <li class="nav-item mx-2 order-last order-md-first" title="[[global:login]]" role="menuitem">
-	<button class="nav-link" id="login" aria-label="[[global:login]]">
+	<button class="nav-link" id="loginOut" aria-label="[[global:login]]">
 		<span class="d-flex gap-2 align-items-center text-nowrap truncate-open">
 			<span class="position-relative">
 				<i class="fa fa-fw fa-sign-in"></i>
@@ -9,8 +9,8 @@
 		</span>
 	</button>
 	<script>
-		const login = document.getElementById('login');
-		login.addEventListener('click', () => {
+		const loginOut = document.getElementById('loginOut');
+		loginOut.addEventListener('click', () => {
 			localStorage.setItem('redirect', '/forum');
 			window.location.href='/auth'
 		})

@@ -124,7 +124,10 @@ $breadcrumb-item-padding-x: 12px !default;
 
 .tab-bg li:hover a,
 .tab-bg button:hover span,
+.tab-bg li:hover button,
 button.tab-bg:hover span,
+li.tab-bg:hover span,
+li.tab-bg:hover button,
 li.tab-bg:hover a {
   background: #30336d !important;
 }
@@ -143,6 +146,13 @@ li.tab-bg:hover a {
   &.active {
     background: linear-gradient(to right, #ff006c, #d911ba) !important;
     text-decoration: none;
+  }
+}
+
+.btn-img {
+  > img {
+    object-fit: cover;
+    margin-right: 10px;
   }
 }
 .btn-outline-light {
@@ -186,6 +196,11 @@ table {
   > a {
     color: #e40ba1 !important;
   }
+}
+
+.username {
+  opacity: 0.7 !important;
+  @include create-font(20px, 500);
 }
 
 ::-webkit-calendar-picker-indicator {

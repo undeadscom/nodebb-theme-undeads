@@ -12,6 +12,7 @@
 	],
 	"scripts": [
 		"public/client.js",
+		"public/custom/donate.js",
 		"public/custom/wheel.js",
 		"public/custom/external-rate.js",
 		"public/custom/header-slider.js",

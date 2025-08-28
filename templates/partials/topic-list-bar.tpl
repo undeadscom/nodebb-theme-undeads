@@ -49,8 +49,8 @@
 				{{{ if (!loggedIn && (!privileges.topics:create && !canPost))}}}
 				<button component="category/post/guest" class="btn btn-sm btn-primary" id="loginToPost">[[category:guest-login-post]]</button>
 				<script>
-					const login = document.getElementById('loginToPost');
-						login.addEventListener('click', () => {
+					const loginPost = document.getElementById('loginToPost');
+						loginPost.addEventListener('click', () => {
 						localStorage.setItem('redirect', '/forum');
 						window.location.href='/auth'
 					})
