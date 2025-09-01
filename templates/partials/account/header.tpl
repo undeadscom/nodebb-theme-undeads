@@ -59,7 +59,7 @@
 			<div class="flex-shrink-0 d-flex gap-1 align-self-stretch align-self-md-start justify-content-end">
 				{{{ if loggedIn }}}
 				{{{ if !isSelf }}}
-				<button id="donate" class="btn btn-primary btn-img" data-uid="{{uid}}" data-username="{{username}}" data-picture="{{picture}}"><img src="/forum/assets/images/coins-icon.svg" alt="coins">Donate UDS</button>
+				<button id="donate" component="account/donate" class="btn btn-primary btn-img" data-uid="{{uid}}" data-username="{{username}}" data-picture="{{picture}}"><img src="/forum/assets/images/coins-icon.svg" alt="coins">Donate UDS</button>
 				<a component="account/unfollow" href="#" class="btn btn-primary flex-fill{{{ if (!isFollowing && !isFollowPending) }}} hide{{{ end }}}">[[user:{{{ if isFollowPending }}}cancel-follow{{{ else }}}unfollow{{{ end }}}]]</a>
 				<a component="account/follow" href="#" class="btn btn-primary flex-fill{{{ if (isFollowing || isFollowPending) }}} hide{{{ end }}}">[[user:follow]]</a>
 				{{{ end }}}
