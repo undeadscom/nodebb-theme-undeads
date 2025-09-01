@@ -39,6 +39,11 @@
   padding-bottom: 40px !important;
   overflow: hidden;
   box-sizing: border-box;
+  @include media(420px) {
+    width: calc(100% + 3rem);
+    max-width: none;
+    margin-left: -1.5rem !important;
+  }
 }
 
 .swiper-slide {
@@ -56,6 +61,13 @@
   height: 200px !important;
   max-width: 100%;
   box-sizing: border-box;
+
+  @include media(420px) {
+    border-radius: 0px;
+    border-left: 0;
+    border-right: 0;
+    padding: 4px 0;
+  }
 }
 
 .swiper-slide::before {
@@ -69,6 +81,11 @@
     url("https://cdn.undeads.com/assets/banners/airdrop/grid.png") repeat 100% 0;
   border-radius: 20px;
   z-index: 0;
+  @include media(420px) {
+    left: 0;
+    right: 0;
+    border-radius: 0;
+  }
 }
 
 .slide-content {
