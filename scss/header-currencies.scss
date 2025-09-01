@@ -10,7 +10,7 @@
   padding: 8px;
   justify-content: center;
   align-items: flex-start;
-  gap: 12px;
+  gap: 8px;
   background-color: #fff;
   border-radius: 8px;
 }
@@ -29,6 +29,10 @@
   align-items: center;
   gap: 2px;
   cursor: pointer;
+
+  @include media(420px) {
+    padding: 4px 0px;
+  }
 
   &:hover {
     background: rgba(#5b617c, 0.15);
@@ -56,6 +60,9 @@
     line-height: 24px;
   }
   &-arrow {
+    @include media(420px) {
+      display: none;
+    }
     padding-left: 4px;
     width: 24px;
     height: 24px;
