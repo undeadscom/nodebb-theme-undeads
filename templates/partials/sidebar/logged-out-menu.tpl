@@ -1,17 +1,24 @@
 
 <li class="nav-item mx-2 order-last order-md-first" title="[[global:login]]" role="menuitem">
-	<a class="nav-link" href="{relative_path}/login" aria-label="[[global:login]]">
+	<button class="nav-link" id="loginOut" aria-label="[[global:login]]">
 		<span class="d-flex gap-2 align-items-center text-nowrap truncate-open">
 			<span class="position-relative">
 				<i class="fa fa-fw fa-sign-in"></i>
 			</span>
 			<span class="nav-text small visible-open fw-semibold">[[global:login]]</span>
 		</span>
-	</a>
+	</button>
+	<script>
+		const loginOut = document.getElementById('loginOut');
+		loginOut.addEventListener('click', () => {
+			localStorage.setItem('redirect', '/forum');
+			window.location.href='/auth'
+		})
+	</script>
 </li>
 <hr class="my-2 mx-2 visible-open">
 {{{ if allowRegistration }}}
-<li class="nav-item mx-2" title="[[global:register]]" role="menuitem">
+<!--<li class="nav-item mx-2" title="[[global:register]]" role="menuitem">
 	<span class="text-xs visible-open">[[login:dont-have-account]]</span>
 	<a class="nav-link" href="{relative_path}/register" aria-label="[[global:register]]">
 		<span class="d-flex gap-2 align-items-center text-nowrap truncate-open">
@@ -22,7 +29,7 @@
 		</span>
 	</a>
 </li>
-<hr class="my-2 mx-2 visible-open">
+<hr class="my-2 mx-2 visible-open"> -->
 {{{ end }}}
 
 {{{ if config.searchEnabled }}}
