@@ -1,0 +1,58 @@
+.viral-wheel {
+  position: absolute;
+  right: 160px;
+  bottom: 5px;
+  width: 180px;
+  height: 180px;
+}
+
+.viral-wheel img {
+  display: block;
+  width: 100%;
+}
+
+.viral-wheel__btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  pointer-events: auto;
+}
+
+.viral-wheel__btn img.viral__spin {
+  width: 54px;
+  height: 54px;
+}
+
+.viral-wheel__btn-disabled,
+.viral-wheel--spinning .viral-wheel__btn {
+  opacity: 0.9;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.viral-wheel__cursor {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+  z-index: 3;
+  width: 16px;
+  pointer-events: none;
+}
+
+.viral-wheel__source {
+  pointer-events: none;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  transition: transform 0ms linear;
+}
+
+.viral__spin-disabled {
+  opacity: 0.9;
+  cursor: not-allowed;
+}

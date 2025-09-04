@@ -6,7 +6,7 @@
 			<div class="input-group">
 				<input class="form-control form-control-sm" type="text" id="user-search" placeholder="[[users:enter-username]]" data-bs-toggle="dropdown" autocomplete="off" aria-haspopup="true" aria-expanded="false"/>
 
-				<ul component="blocks/search/list" class="dropdown-menu dropdown-menu-end p-1 text-sm block-edit overflow-auto" style="max-height:300px;" role="menu">
+				<ul component="blocks/search/list" class="tab-bg dropdown-menu dropdown-menu-end p-1 text-sm block-edit overflow-auto" style="max-height:300px;" role="menu">
 					<li component="blocks/start-typing">
 						<a href="#" class="dropdown-item rounded-1" role="menuitem">[[admin/menu:search.start-typing]]</a>
 					</li>

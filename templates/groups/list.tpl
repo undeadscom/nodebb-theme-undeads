@@ -4,10 +4,10 @@
 	{{{end}}}
 </div>
 <div class="groups list flex-fill">
-	<h3 class="fw-semibold">[[pages:groups]]</h3>
+	<h3 class="fw-semibold d-flex justify-content-start">[[pages:groups]]</h3>
 	<div class="list-group-header d-flex flex-wrap justify-content-between p-3 border rounded">
 		<div class="mb-2 mb-md-0 d-flex justify-content-center">
-			<div class="text-sm d-flex flex-wrap align-items-center gap-2">
+			<div class="text-sm d-flex flex-wrap align-items-center gap-2" style="color:#adb5bd">
 				[[topic:sort-by]]
 				<div class="d-flex flex-wrap gap-2">
 					<a href="?sort=alpha" class="btn btn-ghost btn-sm ff-secondary fw-semibold text-nowrap {{{ if (sort == "alpha") }}}active{{{ end }}}">[[groups:details.group-name]]</a>

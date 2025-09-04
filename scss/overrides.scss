@@ -5,7 +5,7 @@
 
 @import "header-slider";
 @import "header-currencies";
-
+@import "mixins";
 // Harmony colours
 $white: #fff !default;
 $gray-100: #f8f9fa !default;
@@ -95,6 +95,116 @@ $breadcrumb-item-padding-x: 12px !default;
   @media (max-width: 991px) {
     flex-direction: column;
   }
+}
+
+.link-start-white {
+  color: white !important;
+  display: block;
+  text-align: left;
+  @include create-font(20px, 600, 30px, none, normal, "Poppins");
+}
+
+.btn-warning {
+  color: white !important;
+  background: linear-gradient(to right, #ff006c, #d911ba) !important;
+  @include create-font(14px, 700);
+  border: 1px solid white !important;
+}
+
+.chat-user {
+  > a {
+    color: #e40ba1 !important;
+    text-decoration: none !important;
+  }
+}
+
+.posts-links a {
+  color: #e40ba1 !important;
+}
+
+.tab-bg li:hover a,
+.tab-bg button:hover span,
+.tab-bg li:hover button,
+button.tab-bg:hover span,
+li.tab-bg:hover span,
+li.tab-bg:hover button,
+li.tab-bg:hover a {
+  background: #30336d !important;
+}
+
+.bg-primary {
+  background: linear-gradient(to right, #ff006c, #d911ba) !important;
+}
+
+.post {
+  color: #e40ba1 !important;
+  text-decoration: none !important;
+}
+
+.btn-link {
+  &:hover,
+  &.active {
+    background: linear-gradient(to right, #ff006c, #d911ba) !important;
+    text-decoration: none;
+  }
+}
+
+.btn-img {
+  > img {
+    object-fit: cover;
+    margin-right: 10px;
+  }
+}
+.btn-outline-light {
+  font-family: "Manrope", sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  &:hover {
+    transition: 0.3s;
+    background: linear-gradient(to right, #ff006c, #d911ba) !important;
+  }
+}
+
+.topic-thumbs-view-modal {
+  color: white !important;
+}
+
+.topic-thumbs-modal {
+  color: white !important;
+}
+
+.modal-content {
+  color: white !important;
+}
+
+div.bootbox-body p,
+div.bootbox-body table,
+div.bootbox-body span,
+div.bootbox-body * {
+  color: white !important;
+}
+div.bootbox-body a {
+  color: #e40ba1 !important;
+}
+
+table {
+  color: white !important;
+}
+
+.modal-content-custom {
+  color: white !important;
+  > a {
+    color: #e40ba1 !important;
+  }
+}
+
+.username {
+  opacity: 0.7 !important;
+  @include create-font(20px, 500);
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
 }
 
 .header-slider-container {

@@ -1,6 +1,6 @@
 
 			</div><!-- /.container#content -->
-		</main>
+		</div>
 		<!-- IMPORT partials/sidebar-right.tpl -->
 	</div>
 	{{{ if !config.theme.topMobilebar }}}

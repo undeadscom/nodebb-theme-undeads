@@ -12,6 +12,9 @@
 	],
 	"scripts": [
 		"public/client.js",
+		"public/custom/wheel.js",
+		"public/custom/external-rate.js",
+		"public/custom/header-slider.js",
 		"../nodebb-theme-harmony/public/harmony.js"
 	],
 	"templates": "templates",

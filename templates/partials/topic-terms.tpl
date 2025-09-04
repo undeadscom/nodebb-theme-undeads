@@ -3,7 +3,7 @@
 		<i class="fa fa-fw fa-clock text-primary"></i>
 		<span class="visible-md-inline visible-lg-inline fw-semibold">{selectedTerm.name}</span>
 	</button>
-	<ul class="dropdown-menu p-1 text-sm" role="menu">
+	<ul class="tab-bg dropdown-menu p-1 text-sm" role="menu">
 		{{{each terms}}}
 		<li role="presentation" class="category">
 			<a class="dropdown-item rounded-1 d-flex align-items-center gap-2" role="menuitem" href="{config.relative_path}/{terms.url}">
