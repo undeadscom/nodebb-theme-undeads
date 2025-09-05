@@ -15,10 +15,10 @@ function initHeaderSwiper() {
       el: ".swiper-pagination",
       clickable: true,
     },
-    // autoplay: {
-    //   delay: 5000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
   });
 
   // auto-trigger wheel spin when first slide becomes active
