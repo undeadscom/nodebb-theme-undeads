@@ -1,6 +1,23 @@
 <div class="swiper header-swiper">
 	<div class="swiper-wrapper">
 		<div class="swiper-slide">
+			<div class="slide-content slide-content-4">
+				<div class="slide-left">
+					<h3 class="slide-title-4">Earn up to 50 UDS per post</h3>
+					<p class="slide-description">Post in Forum to earn rewards!</p>
+					<div class="slide-buttons-container">
+						<div id="modal-btn" class="slide-button slide-button-4">
+							Learn more
+						</div>
+					</div>
+				</div>
+				<div class="slide-right-4">
+					<img src="https://cdn.undeads.com/assets/forum/header-slider/slide4.png" alt="UDS Right" class="slide-image">
+				</div>
+			</div>
+		</div>
+
+		<div class="swiper-slide">
 			<div class="slide-content slide-content-1">
 				<div class="slide-left">
 					<h3 class="slide-title">Spin your Wheel of Fortune!</h3>
@@ -15,6 +32,7 @@
 				</div>
 			</div>
 		</div>
+		
 		<div class="swiper-slide">
 			<div class="slide-content slide-content-2">
 				<div>
@@ -70,23 +88,6 @@
 			</div>
 		</div>
 
-		<div class="swiper-slide">
-			<div class="slide-content slide-content-4">
-				<div class="slide-left">
-					<h3 class="slide-title-4">Earn up to 50 UDS per post</h3>
-					<p class="slide-description">Post in Forum to earn rewards!</p>
-					<div class="slide-buttons-container">
-						<div id="modal-btn" class="slide-button slide-button-4">
-							Learn more
-						</div>
-					</div>
-				</div>
-				<div class="slide-right-4">
-					<img src="https://cdn.undeads.com/assets/forum/header-slider/slide4.png" alt="UDS Right" class="slide-image">
-				</div>
-			</div>
-		</div>
-
 	</div>
 	<div class="swiper-pagination"></div>
 </div>
@@ -122,7 +123,7 @@
 					<div class="uds-modal__divider uds-modal__divider--lg"></div>
 					<div class="uds-modal__note-row">
 						<span class="uds-modal__note-star">*</span>
-						<p class="uds-modal__note">Rewards are credited at the end of the day. Limited to 5 payable posts per day, 50 K holders - 3 posts per day, 100K holders - 2 posts per day. Staked UDS brings additional coefficient up to X1.5</p>
+						<p class="uds-modal__note">Rewards are credited at the end of the day. Limited to 5 payable posts per day, 50 K holders - 3 posts per day, 100K holders - 2 posts per day. Staked UDS gives additional coefficient up to X1.5</p>
 					</div>
 				</div>
 			</div>
