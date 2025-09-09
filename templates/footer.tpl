@@ -15,6 +15,7 @@
 	<div>
 		<div component="toaster/tray" class="alert-window fixed-bottom mb-5 mb-md-2 me-2 me-md-5 ms-auto" style="width:300px; z-index: 1090;">
 			<!-- IMPORT partials/reconnect-alert.tpl -->
+			<!-- IMPORT partials/undeads-alert.tpl -->
 		</div>
 	</div>
 	{{{ end }}}
