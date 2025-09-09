@@ -3,11 +3,11 @@
 		<div>
 			<a href="#" role="button" class="nav-link d-flex justify-content-between align-items-center position-relative" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<span class="position-relative">
-					<i class="fa fa-fw fa-lg fa-bars"></i>
+					<i class="fa fa-fw fa-lg fa-bars" ></i>
 					<span component="unread/count" data-unread-url="{unreadCount.unreadUrl}" class="position-absolute top-0 start-100 translate-middle badge rounded-1 bg-primary {{{ if !unreadCount.mobileUnread }}}hidden{{{ end }}}">{unreadCount.mobileUnread}</span>
 				</span>
 			</a>
-			<ul class="navigation-dropdown dropdown-menu" role="menu">
+			<ul class="navigation-dropdown dropdown-menu mobile-dropdown" role="menu" style="background-color: #070928 !important;">
 				{{{ each navigation }}}
 				{{{ if displayMenuItem(@root, @index) }}}
 				<li class="nav-item {./class}{{{ if ./dropdown }}} dropend{{{ end }}}" title="{./title}">
@@ -15,7 +15,7 @@
 						<span class="d-inline-flex justify-content-between align-items-center w-100">
 							<span class="text-nowrap">
 								{{{ if ./iconClass }}}
-								<i class="fa fa-fw {./iconClass}" data-content="{./content}"></i>
+								<i class="fa fa-fw {./iconClass}" data-content="{./content}" style="color:white;"></i>
 								{{{ end }}}
 								{{{ if ./text }}}<span class="nav-text px-2 fw-semibold">{./text}</span>{{{ end }}}
 							</span>
@@ -71,13 +71,6 @@
 				</li>
 				{{{ end }}}
 
-				{{{ if allowRegistration }}}
-				<li class="nav-item mx-2" title="[[global:register]]">
-					<a class="nav-link" href="{relative_path}/register">
-						<i class="fa fa-fw fa-user-plus"></i>
-					</a>
-				</li>
-				{{{ end }}}
 
 				<li class="nav-item mx-2" title="[[global:login]]">
 					<a class="nav-link" href="{relative_path}/login">

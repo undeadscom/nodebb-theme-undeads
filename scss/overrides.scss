@@ -2,7 +2,7 @@
 
 // below are the default values from harmony theme overrides.scss file
 // feel free to change these for your custom theme
-
+@import "mobile-undeads";
 @import "header-slider";
 @import "header-currencies";
 @import "mixins";
@@ -134,6 +134,10 @@ li.tab-bg:hover a {
 
 .bg-primary {
   background: linear-gradient(to right, #ff006c, #d911ba) !important;
+}
+
+.bg-main {
+  background: $main !important;
 }
 
 .post {
