@@ -1,5 +1,6 @@
 // Header slider styles
 @import "./mixins";
+@import "./uds-modal";
 :root {
   --gradient-rainbow: linear-gradient(
     90deg,
@@ -33,7 +34,7 @@
 }
 
 .swiper {
-  max-width: 100%;
+  max-width: 1296px;
   width: 100%;
   margin: 10px 0;
   padding-bottom: 40px !important;
@@ -120,6 +121,14 @@
     flex-direction: column;
     align-items: center;
   }
+}
+
+.slide-content-4 {
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 16px 16px 42px;
+  flex-direction: row;
+  position: relative;
 }
 
 .slide-content-2 {
@@ -220,6 +229,24 @@
     align-items: flex-start;
   }
 }
+.slide-right-4 {
+  position: absolute;
+  top: 0;
+  left: 300px;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-left: 0;
+  padding-bottom: 0;
+
+  @media (max-width: 987px) {
+    left: 230px;
+  }
+  @media (max-width: 720px) {
+    left: 150px;
+  }
+}
 
 .slide-right-3 {
   position: absolute;
@@ -317,6 +344,7 @@
   }
 }
 
+.slide-title-4,
 .slide-title-3,
 .slide-title-2 {
   color: #fff;
@@ -393,6 +421,31 @@
   }
 }
 
+.slide-buttons-container {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.slide-button-secondary {
+  display: flex;
+  padding: 12px 16px;
+  align-items: center;
+  border-radius: 12px;
+  color: #fff;
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 24px;
+  transition: all 0.3s ease;
+  width: 300px;
+  justify-content: center;
+  background-color: #140c4982;
+  border: 2px solid #ffffff;
+}
+
 .slide-button {
   display: flex;
   padding: 12px 16px;
@@ -408,6 +461,7 @@
   transition: all 0.3s ease;
   width: 300px;
   justify-content: center;
+  cursor: pointer;
   background-image: linear-gradient(
       45deg,
       rgba(255, 255, 255, 0.01) 25%,
@@ -423,7 +477,16 @@
     padding: 12px 0;
   }
 }
-.slide-button:hover {
+
+.slide-button-4 {
+  width: 200px;
+  @include media(720px) {
+    width: 121px;
+    padding: 12px 0;
+  }
+}
+
+.slide-button-secondary:hover .slide-button:hover {
   text-decoration: none;
 }
 

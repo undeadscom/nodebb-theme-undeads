@@ -38,6 +38,46 @@ function initHeaderSwiper() {
   swiper.on("slideChangeTransitionEnd", function () {
     trySpinWheelInActiveSlide();
   });
+
+  var modalEl = document.getElementById("uds-modal");
+  if (modalEl) {
+    /** @type {HTMLElement} */
+    var modal = modalEl;
+    var closeSelectors = "[data-uds-modal-close]";
+    var closeTargets = modal.querySelectorAll(closeSelectors);
+
+    function openModal() {
+      modal.classList.add("is-open");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal() {
+      modal.classList.remove("is-open");
+      document.body.style.overflow = "";
+    }
+
+    // Delegate open click to container to handle Swiper clones
+    container.addEventListener("click", function (ev) {
+      var t = ev.target;
+      var trigger = null;
+      if (t && t instanceof Element && t.closest) {
+        trigger = t.closest("#modal-btn");
+      }
+      if (trigger) {
+        openModal();
+      }
+    });
+
+    closeTargets.forEach(function (el) {
+      el.addEventListener("click", closeModal);
+    });
+
+    document.addEventListener("keydown", function (ev) {
+      if (ev.key === "Escape" && modal.classList.contains("is-open")) {
+        closeModal();
+      }
+    });
+  }
 }
 
 document.addEventListener("DOMContentLoaded", initHeaderSwiper);
