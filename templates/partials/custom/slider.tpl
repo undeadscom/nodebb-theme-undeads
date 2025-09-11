@@ -112,11 +112,11 @@
 				<div class="uds-modal__content-text">
 					<ul class="uds-modal__list">
 						<li>100 - 999 UDS: <span class="uds-modal__list-value">0.05 UDS</span></li>
-						<li>1000 - 24999 UDS: <span class="uds-modal__list-value">0.10 UDS</span></li>
+						<li>1000 - 2499 UDS: <span class="uds-modal__list-value">0.10 UDS</span></li>
 						<li>2500 - 4999 UDS: <span class="uds-modal__list-value">0.5 UDS</span></li>
 						<li>5000 - 9999 UDS: <span class="uds-modal__list-value">1.5 UDS</span></li>
 						<li>10000 - 24999 UDS: <span class="uds-modal__list-value">5 UDS</span></li>
-						<li>25000 - 499999 UDS: <span class="uds-modal__list-value">10 UDS</span></li>
+						<li>25000 - 49999 UDS: <span class="uds-modal__list-value">10 UDS</span></li>
 						<li>50000 - 99 999 UDS: <span class="uds-modal__list-value">25 UDS</span></li>
 						<li>100 000 UDS or more: <span class="uds-modal__list-value">50 UDS</span></li>
 					</ul>
